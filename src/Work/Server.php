@@ -61,7 +61,7 @@ class Server implements ServerInterface
 
         $this->prepend($this->decryptRequestMessage());
 
-        $response = $this->handle(new Response(200, [], 'SUCCESS'), $message);
+        $response = $this->handle(new Response(200, [], 'success'), $message);
 
         if (! ($response instanceof ResponseInterface)) {
             $response = $this->transformToReply($response, $message, $this->encryptor);
